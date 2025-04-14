@@ -23,7 +23,7 @@
 ## 🚀 Install
 
 ### From the Chrome Web Store  
-> **(coming soon)** — click **Add to Chrome** and you’re done.
+> **(coming soon)** 
 
 ### Manual install (dev mode)
 
