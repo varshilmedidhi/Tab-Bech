@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Tab Bench</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🪑 Tab Bench</h1>
+      <button id="refreshBtn" title="Refresh list">⟳</button>
+    </header>
+
+    <section id="tabGroups"></section>
+
+    <section class="workspace">
+      <h2>Workspace</h2>
+      <input id="wsName" placeholder="Name this workspace…" />
+      <button id="saveWs">💾 Save <span id="selCount">All</span> Tabs</button>
+      <div id="wsList"></div>
+    </section>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
