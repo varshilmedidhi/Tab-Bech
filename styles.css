@@ -1,0 +1,184 @@
+/* === Tab Bench · Frosted‑Glass UI === */
+
+:root {
+  --bg-grad: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --glass: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --txt: #f3f7fa;
+  --accent: #55b9ff;
+  --accent-hover: #3fa4ec;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  margin: 0;
+  padding: 18px;
+  width: 400px;
+  min-height: 520px;
+  background: var(--bg-grad);
+  color: var(--txt);
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- Frosted card wrapper ---------- */
+.card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(14px);
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* ---------- buttons ---------- */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+button:active {
+  transform: translateY(0);
+}
+#refreshBtn {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: none;
+  font-size: 20px;
+  padding: 4px 10px;
+}
+
+/* ---------- groups ---------- */
+.group {
+  margin-bottom: 14px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.group header {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.tab {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+}
+.tab:first-of-type {
+  border-top: none;
+}
+.tab span {
+  white-space: normal;
+  word-break: break-all;
+  line-height: 1.25em;
+  max-height: 2.5em; /* clamp to two lines */
+  overflow: hidden;
+}
+
+/* checkbox accent */
+input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4));
+}
+
+/* ---------- workspace ---------- */
+.workspace h2 {
+  margin: 6px 0 10px;
+  font-weight: 600;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--txt);
+  margin-bottom: 10px;
+  backdrop-filter: blur(10px);
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ws-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.ws-item:last-child {
+  border-bottom: none;
+}
+.ws-item button {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* ---------- card containers ---------- */
+#tabGroups,
+.workspace {
+  margin-bottom: 18px;
+}
+#tabGroups > .group,
+.workspace > .ws-item,
+.workspace > input,
+.workspace > button {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* overall cards */
+#tabGroups,
+.workspace {
+  padding: 0;
+}
+#tabGroups .group,
+.workspace {
+  backdrop-filter: blur(14px);
+}
