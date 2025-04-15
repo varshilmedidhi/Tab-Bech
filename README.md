@@ -53,7 +53,7 @@ That’s it — the 🪑 icon appears in your toolbar.
 ## 🛠 Run locally (hack / contribute)
 
 ```bash
-git clone https://github.com/your-handle/tab-bench.git
+git clone https://github.com/your-handle/tab-bench.git](https://github.com/varshilmedidhi/Tab-Bech
 cd tab-bench
 # edit files…
 # then load the folder via chrome://extensions → Load unpacked
